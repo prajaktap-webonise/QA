@@ -7,18 +7,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class TestingSignup {
-    
- 
+
     public static void main(String []args) throws InterruptedException {
-        
-      
-        
+  
       System.setProperty("webdriver.chrome.driver", "/home/webonise/workspace/Testing/Resource/chromedriver");
       WebDriver driver;
        
       driver = new ChromeDriver();
-        
-        
+          
       driver.get("https://web-stg.gofaceoff.com/");
        
       WebElement signup = driver.findElement(By.xpath("//a[@href='/signup']"));
@@ -26,10 +22,7 @@ public class TestingSignup {
         
       WebElement email = driver.findElement(By.xpath("//input[@name='email']"));
       email.sendKeys("prajaktap422@gmail.com");
-        
-        
-      
-        
+           
       WebElement username = driver.findElement(By.xpath("//input[@name='username']"));
       username.clear();
       username.sendKeys("prajaktapa");
@@ -56,8 +49,7 @@ public class TestingSignup {
       
       WebElement referralCode = driver.findElement(By.xpath("//*[ @name = 'referralCode']"));
       referralCode.clear();
-      referralCode.sendKeys("ian");
-      
+      referralCode.sendKeys("ian");   
       
       WebElement signup1 = driver.findElement(By.xpath("//*[ @type='submit']"));
       signup1.click();
@@ -69,10 +61,7 @@ public class TestingSignup {
       WebElement log_pref = driver.findElement(By.xpath("//span[@class = 'dropDownIcon']"));
       log_pref.click();
       
-      
       WebElement logout = driver.findElement(By.xpath("//a[ text()='Log Out']"));
-      logout.click();
-      
-    	
+      logout.click();	
     }
 }
